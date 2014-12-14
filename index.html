@@ -1,7 +1,144 @@
 <!DOCTYPE html>
-<html>
+<head>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="raphael-1.5.2-min.js"></script>
+
+<meta charset="utf-8">
+
+
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+
+  <div data-role="page">
+
+    <div data-role="header">
+      <h1>Camera Array Simulator</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-field-contain" align="center">
+        <table width="1">
+          <tr>
+            <label for="nc">NC:</label>
+            <input type="text" name="nc" id="nc">
+
+
+          </tr>
+          <tr>
+            <label for="ns">NS:</label>
+            <input type="text" name="ns" id="ns">
+
+
+          </tr>
+          <tr>
+            <button align="center" class="ui-btn" name="vis" id="vis">Draw!</button>
+
+
+          </tr>
+
+        </table>
+        </div>
+      <div align="center" id="raph"></id>
+      <script>
+      function draw_op(ns,nc,rad,dim)
+      {
+        var centr=dim/2;
+        // Creates canvas
+        var paper = Raphael("raph", centr*2, centr*2);
+        paper.canvas.style.backgroundColor = '#f1f09f';
+
+
+        // Creates circle at x, y with radius rad
+        var circle = paper.circle(centr, centr, rad);
+        // Sets the fill attribute of the circle to white
+        circle.attr("fill", "#a0ee90");
+
+        for (i=0;i<nc;i++)
+        {
+          var a=i*360/nc;
+          var elements = paper.set();
+          var r1 = paper.rect(centr-rad,centr-rad,2*rad,2*rad,0);
+          //var r2 = paper.rect(50,200,100,15,5);
+
+
+          for (j=0;j<ns;j++)
+          {
+            var line = paper.path( ["M", centr-rad, centr-rad+j*2*rad/ns, "L", centr+rad, centr-rad+j*2*rad/ns ] );
+            elements.push(line);
+
+          }
+
+          elements.push(r1);
+
+          elements.rotate(a,centr,centr)  // deprecated
+
+        }
+
+      }
+
+    function draw_op_dithered(ns,nc,rad,dim)
+    {
+      var centr=dim/2;
+      var q=2*rad/ns;
+      // Creates canvas
+      var paper = Raphael(0, 0, centr*2, centr*2);
+      paper.canvas.style.backgroundColor = '#f1f09f';
+
+
+      // Creates circle at x, y with radius rad
+      var circle = paper.circle(centr, centr, rad);
+      // Sets the fill attribute of the circle to white
+      circle.attr("fill", "#a0ee90");
+
+      for (i=0;i<nc;i++)
+      {
+        var a=i*360/nc;
+        var elements = paper.set();
+        var r1 = paper.rect(centr-rad,centr-rad,2*rad,2*rad,0);
+        //var r2 = paper.rect(50,200,100,15,5);
+
+        //Pointer to the current quantization threshold line
+        var holder=centr-rad;
+        //for (j=1;j<ns-1;j++)
+        while (centr+rad-holder>q)
+        {
+          holder=holder+Math.random()*q;
+          var line = paper.path( ["M", centr-rad, holder, "L", centr+rad, holder ] );
+          elements.push(line);
+
+        }
+
+        elements.push(r1);
+
+        elements.rotate(a,centr,centr)  // deprecated
+
+      }
+
+    }
+      var nc=5;
+      var ns=5;
+      var rad=120;
+      var dim=300;
+
+      draw_op(ns,nc,rad,dim);
+
+
+      </script>
+
+    </div>
+
+    <div data-role="footer">
+      <h1>Footer Text</h1>
+    </div>
+
+  </div>
+
+
 </body>
-</html>
