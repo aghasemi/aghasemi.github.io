@@ -1,4 +1,4 @@
- function draw_op(paper,ns,nc,rad,dim)
+function draw_op(paper,ns,nc,rad,dim)
       {
         var centr=dim/2;
         // Creates canvas
