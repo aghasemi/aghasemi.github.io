@@ -9,8 +9,37 @@
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/visualize.js"></script>
 
-<meta charset="utf-8">
+  <meta charset="utf-8">
+  <style>
+  @media only screen and (min-width: 800px){
+    body {
+      background:transparent !important;
+      overflow:hidden !important;
+    }
+    html {
+      background: #fff;
+      background-attachment: fixed;
+      overflow:hidden !important;
+    }
+    .ui-page {
+      width: 500px !important;
+      border:60px solid #111 !important;
+      margin: 50px auto !important;
+      position: relative !important;
+      border-right: 20px #222 outset !important;
+      border-left: 20px #000 outset !important;
+      border-radius:25px;
+      -webkit-border-radius:25px;
+      -moz-border-radius:25px;
+      overflow-y:scroll !important;
+      min-height:900px !important;
+      height:900px !important;
+      max-height:900px !important;
+      padding-bottom:0px;
+    }
 
+  }
+  </style>
 
 </head>
 
@@ -55,7 +84,7 @@
       <script>
 
 	  	$(function() {
-	  		var dim=effectiveDeviceWidth();;
+	  		var dim=Math.min(effectiveDeviceWidth(),390);;
 			var rad=dim/4;
 	  		var paper = Raphael("raph", dim, dim);
 	  		Draw(paper,dim,rad);
