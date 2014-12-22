@@ -84,7 +84,7 @@
       <script>
 
 	  	$(function() {
-	  		var dim=Math.min(effectiveDeviceWidth(),390);;
+	  		var dim=$( "#vis" ).width();
 			var rad=dim/4;
 	  		var paper = Raphael("raph", dim, dim);
 	  		Draw(paper,dim,rad);
