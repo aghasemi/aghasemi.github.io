@@ -3,11 +3,11 @@
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="raphael-1.5.2-min.js"></script>
+  <script type="text/javascript" src="js/raphael-1.5.2-min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <script src="visualize.js"></script>
+  <script src="js/visualize.js"></script>
 
 <meta charset="utf-8">
 
@@ -41,41 +41,41 @@
      	      <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
      	      <label for="radio-choice-2">Pinhole Projection</label>
             </fieldset>
-            
+
             <label><input type="checkbox" name="dithered" id="dithered"/> Dithered</label>
 
-			
+
             <!-- <button align="center" class="ui-btn" name="vis" id="vis">Draw!</button>-->
 
 
 
         </div>
-      <div align="center" id="raph"></id> </div> 
-      <script> 
-	 
+      <div align="center" id="raph"></id> </div>
+      <script>
+
 	  	$(function() {
 	  		var dim=effectiveDeviceWidth();;
 			var rad=dim/4;
 	  		var paper = Raphael("raph", dim, dim);
 	  		Draw(paper,dim,rad);
-    		$( "#nc" ).on( 'slidestop', function( event ) { 	
-    			console.log('NC Changed '+nc); 
+    		$( "#nc" ).on( 'slidestop', function( event ) {
+    			console.log('NC Changed '+nc);
     			Draw(paper,dim,rad);
     		});
-			$( "#ns" ).on( 'slidestop', function( event ) { 	
-    			console.log('NS Changed '+nc); 
+			$( "#ns" ).on( 'slidestop', function( event ) {
+    			console.log('NS Changed '+nc);
     			Draw(paper,dim,rad);
     		});
-			$( "#fov" ).on( 'slidestop', function( event ) { 	
-    			console.log('FoV Changed '+nc); 
+			$( "#fov" ).on( 'slidestop', function( event ) {
+    			console.log('FoV Changed '+nc);
     			Draw(paper,dim,rad)
     		});
-			/*$( "#fov" ).on( 'click', function( event ) { 	
-    			console.log('Clicked '+nc); 
+			/*$( "#fov" ).on( 'click', function( event ) {
+    			console.log('Clicked '+nc);
     			Draw(paper,dim,rad);
     		});*/
-			
-			
+
+
 		});
       </script>
 
