@@ -52,7 +52,7 @@
       Camera Array Simulator
     </div>
 
-    <div data-role="main" class="ui-content">
+    <div data-role="main" class="ui-content" id="mainpage">
       <!-- <div data-role="controlgroup">-->
         <label for="nc" align="center">Cameras:</label>
         <input type="range" name="nc" id="nc" value="5" min="1" max="100" >
@@ -84,7 +84,7 @@
       <script>
 
 	  	$(function() {
-	  		var dim=$( "#vis" ).width();
+	  		var dim=$( "#mainpage" ).width();
 			var rad=dim/4;
 	  		var paper = Raphael("raph", dim, dim);
 	  		Draw(paper,dim,rad);
