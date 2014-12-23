@@ -16,17 +16,20 @@ function draw_op(paper,ns,nc,rad,dim)
           var a=i*360/nc;
           var elements = paper.set();
           var r1 = paper.rect(centr-rad,centr-rad,2*rad,2*rad,0);
-          //var r2 = paper.rect(50,200,100,15,5);
+          var detector = paper.path( ["M", centr+rad, centr+rad, "L", centr+rad, centr-rad ] );
+          detector.attr({"stroke":"#0000FF","stroke-width":3});
 
 
           for (j=0;j<ns;j++)
           {
             var line = paper.path( ["M", centr-rad, centr-rad+j*2*rad/ns, "L", centr+rad, centr-rad+j*2*rad/ns ] );
+            line.attr({"stroke":"#FF00FF","stroke-width":1});
             elements.push(line);
 
           }
 
           elements.push(r1);
+          elements.push(detector);
 
           elements.rotate(a,centr,centr); // deprecated
 
@@ -53,7 +56,9 @@ function draw_op(paper,ns,nc,rad,dim)
         var a=i*360/nc;
         var elements = paper.set();
         var r1 = paper.rect(centr-rad,centr-rad,2*rad,2*rad,0);
-        //var r2 = paper.rect(50,200,100,15,5);
+
+        var detector = paper.path( ["M", centr+rad, centr+rad, "L", centr+rad, centr-rad ] );
+        detector.attr({"stroke":"#0000FF","stroke-width":3});
 
         //Pointer to the current quantization threshold line
         var holder=centr-rad;
@@ -62,11 +67,13 @@ function draw_op(paper,ns,nc,rad,dim)
         {
           holder=holder+Math.random()*q;
           var line = paper.path( ["M", centr-rad, holder, "L", centr+rad, holder ] );
+          line.attr({"stroke":"#FF00FF","stroke-width":1});
           elements.push(line);
 
         }
 
         elements.push(r1);
+        elements.push(detector);
 
         elements.rotate(a,centr,centr) ; // deprecated
 
@@ -84,9 +91,9 @@ function draw_op(paper,ns,nc,rad,dim)
 
     var h1=f*tan_a;
     var h2=(2*r+f)*tan_a;
-    
+
     var q=2*h1/ns;
-      
+
     // Creates canvas
     //var paper = Raphael("raph", centr*2, centr*2);
     paper.canvas.style.backgroundColor = '#f1f09f';
@@ -101,18 +108,19 @@ function draw_op(paper,ns,nc,rad,dim)
     {
       var an=i*360/nc;
       var elements = paper.set();
-      
+
       //Drawing the trapezoid
       var line1 = paper.path( ["M", centr+rad, centr+h1, "L", centr-rad, centr+h2 ] );
       var line2 = paper.path( ["M", centr+rad, centr-h1, "L", centr-rad, centr-h2 ] );
       var line3 = paper.path( ["M", centr+rad, centr+h1, "L", centr+rad, centr-h1 ] );
-      line3.attr({"stroke-width":3});
+      line3.attr({"stroke":"#0000FF","stroke-width":3});
+
       var line4 = paper.path( ["M", centr-rad, centr+h2, "L", centr-rad, centr-h2 ] );
       //var tri   = paper.path( ["M", centr+rad+f, centr, "L", centr+rad, centr+h1 , "L", centr+rad, centr-h1] );
       //tri.attr({"stroke-width": 0, fill: "yellow"});
       var holder=centr-h1;
       var holder2=centr-h2;
-          
+
         //for (j=1;j<ns-1;j++)
         while (centr+h1-holder>q)
         {
@@ -120,10 +128,11 @@ function draw_op(paper,ns,nc,rad,dim)
           holder=holder+rnd_jump;
           holder2=holder2+rnd_jump*h2/h1;
           var line = paper.path( ["M", centr+rad, holder, "L", centr-rad, holder2 ] );
+          line.attr({"stroke":"#FF00FF","stroke-width":1});
           elements.push(line);
 
         }
-      
+
 
       elements.push(line1);
       elements.push(line2);
@@ -136,7 +145,7 @@ function draw_op(paper,ns,nc,rad,dim)
     }
 
   }
-  
+
     function draw_nop(paper,ns,nc,fv,rad,dim)
   {
     var centr=dim/2;
@@ -166,6 +175,8 @@ function draw_op(paper,ns,nc,rad,dim)
       var line1 = paper.path( ["M", centr+rad, centr+h1, "L", centr-rad, centr+h2 ] );
       var line2 = paper.path( ["M", centr+rad, centr-h1, "L", centr-rad, centr-h2 ] );
       var line3 = paper.path( ["M", centr+rad, centr+h1, "L", centr+rad, centr-h1 ] );
+      line3.attr({"stroke":"#0000FF","stroke-width":3});
+
       var line4 = paper.path( ["M", centr-rad, centr+h2, "L", centr-rad, centr-h2 ] );
       //var tri   = paper.path( ["M", centr+rad+f, centr, "L", centr+rad, centr+h1 , "L", centr+rad, centr-h1] );
       //tri.attr({"stroke-width": 0, fill: "yellow"});
@@ -176,7 +187,7 @@ function draw_op(paper,ns,nc,rad,dim)
         //var line_focal = paper.path( ["M", centr+rad+f, centr, "L", centr+rad, centr-h1+j*2*h1/ns ] );
 
         elements.push(line);
-        //elements.push(line_focal);
+        line.attr({"stroke":"#FF00FF","stroke-width":1});
 
       }
 
@@ -200,7 +211,7 @@ function draw_op(paper,ns,nc,rad,dim)
     }
     return deviceWidth;
   }
-  
+
   function Draw(paper,dim,rad)
 	{
 	 		var nc=$( "#nc" ).val();
@@ -208,39 +219,38 @@ function draw_op(paper,ns,nc,rad,dim)
       		var fv=$( "#fov" ).val();
             var ispara=$('input:radio[name=proj]:checked').val().trim().indexOf('-1')>-1;
             var isdithered=$('#dithered:checked').length>0;
-      		
+
       		console.log('Here '+(isdithered)+'8');
       		//window.alert('45');
       		paper.clear();
             if (ispara)
             {
                 if (isdithered)
-                    
+
                 {
                     draw_op_dithered(paper,ns,nc,rad,dim);
                 }
                 else
                 {
                     draw_op(paper,ns,nc,rad,dim);
-                
+
                 }
-                
-                $( "#fov" ).slider("disable");    		
+
+                $( "#fov" ).slider("disable");
             }
             else
             {
                     if (isdithered)
                     {
                         draw_nop_dithered(paper,ns,nc,fv,rad,dim);
-    		        
+
                     }
                     else
                     {
                         draw_nop(paper,ns,nc,fv,rad,dim);
-    		        
+
                     }
                     $( "#fov" ).slider("enable");
             }
-      		    
+
 	}
-     

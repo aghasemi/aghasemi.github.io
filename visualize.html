@@ -22,7 +22,7 @@
       overflow:visible !important;
     }
     .ui-page {
-      width: 500px !important;
+      width: 800px !important;
       border:60px solid #111 !important;
       margin: 50px auto !important;
       position: relative !important;
@@ -54,17 +54,17 @@
 
     <div data-role="main" class="ui-content" id="mainpage">
       <!-- <div data-role="controlgroup">-->
-        <label for="nc" align="center">Cameras:</label>
-        <input type="range" name="nc" id="nc" value="5" min="1" max="100" >
+        <label for="nc" align="center">No. of Cameras:</label>
+        <input type="range" name="nc" id="nc" value="0" min="0" max="100" align="center" >
 
 
-        <label for="ns" align="center">Samples:</label>
-        <input type="range" name="ns" id="ns" value="5" min="1" max="100">
+        <label for="ns" align="center">No. of Samples:</label>
+        <input type="range" name="ns" id="ns" value="5" min="1" max="100" align="center">
 
         <label for="fov" align="center">Field of View:</label>
-        <input type="range" name="fov" id="fov" value="30" min="1" max="179">
+        <input type="range" name="fov" id="fov" value="30" min="1" max="179" align="center">
 
-        <fieldset data-role="controlgroup" data-type="horizontal">
+        <fieldset data-role="controlgroup" data-type="horizontal" align="center">
           <input type="radio" name="proj" id="proj0" value="choice-1"  />
           <label for="proj0">Parallel Projection</label>
           <input type="radio" name="proj" id="proj1" value="choice-2"  checked="checked" />
@@ -85,7 +85,7 @@
       <script>
 
 	  	$(function() {
-	  		var dim=$( "#mainpage" ).width();
+	  		var dim=Math.floor($( "#mainpage" ).width()*0.65);
 			var rad=dim/4;
 	  		var paper = Raphael("raph", dim, dim);
 	  		Draw(paper,dim,rad);
@@ -97,12 +97,12 @@
     			console.log('NS Changed '+nc);
     			Draw(paper,dim,rad);
     		});
-			
+
             $( "#fov" ).on( 'change', function( event ) {
     			console.log('FoV Changed '+nc);
     			Draw(paper,dim,rad)
     		});
-            
+
             $( "#proj0" ).on( 'change', function( event ) {
     			console.log('PP Changed '+nc);
     			Draw(paper,dim,rad)
@@ -111,15 +111,15 @@
     			console.log('OP Changed '+nc);
     			Draw(paper,dim,rad)
     		});
-            
-            
-            
+
+
+
             $( "#dithered" ).on( 'change', function( event ) {
     			console.log('DI Changed '+nc);
     			Draw(paper,dim,rad)
     		});
-            
-            
+
+
 			/* $( "#vis" ).on( 'click', function( event ) {
     			console.log('Clicked '+nc);
     			Draw(paper,dim,rad);
