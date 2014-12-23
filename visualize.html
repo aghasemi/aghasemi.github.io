@@ -85,7 +85,7 @@
       <script>
 
 	  	$(function() {
-	  		var dim=Math.floor($( "#mainpage" ).width()*0.65);
+	  		var dim=Math.min(Math.floor($( "#mainpage" ).width()*0.65),400);
 			var rad=dim/4;
 	  		var paper = Raphael("raph", dim, dim);
 	  		Draw(paper,dim,rad);
