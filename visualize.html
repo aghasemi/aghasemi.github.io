@@ -4,6 +4,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="js/raphael-1.5.2-min.js"></script>
+  <script type="text/javascript" src="js/raphael.export.js"></script>
+
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -64,6 +66,9 @@
         <label for="fov" align="center">Field of View:</label>
         <input type="range" name="fov" id="fov" value="30" min="1" max="179" align="center">
 
+
+
+
         <fieldset data-role="controlgroup" data-type="horizontal" align="center">
           <input type="radio" name="proj" id="proj0" value="choice-1"  />
           <label for="proj0">Parallel</label>
@@ -75,13 +80,17 @@
 
 
 
-        <!-- <button align="center" class="ui-btn" name="vis" id="vis">Draw!</button> -->
+
       <!-- </div> -->
 
 
 
 
       <div align="center" id="raph"> </div>
+      <div id="bar"></div>
+
+      <button align="center" class="ui-btn" name="sv" id="sv">Refresh</button>
+
       <script>
 
 	  	$(function() {
@@ -120,10 +129,15 @@
     		});
 
 
-			/* $( "#vis" ).on( 'click', function( event ) {
+			 $( "#sv" ).on( 'click', function( event ) {
     			console.log('Clicked '+nc);
     			Draw(paper,dim,rad);
-    		});*/
+
+          //var svg = paper.toSVG();
+
+          //document.getElementById('bar').innerHTML = svg;
+
+    		});
 
 
 		});
