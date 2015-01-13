@@ -28,75 +28,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
 
       }
 
-   /* function draw_op_dithered(paper,ns,nc,rad,dim)
-    {
-      var centr=dim/2;
-      var q=2*rad/ns;
-      // Creates canvas
-      //var paper = Raphael("raph", centr*2, centr*2);
-      paper.canvas.style.backgroundColor = '#f1f09f';
-
-
-      // Creates circle at x, y with radius rad
-      var circle = paper.circle(centr, centr, rad);
-      // Sets the fill attribute of the circle to white
-      circle.attr("fill", "#a0ee90");
-
-      for (i=0;i<nc;i++)
-      {
-        var an=i*360/nc;
-        
-          draw_camera(paper,an,ns,0,rad,dim,true,true);
-      }
-
-    }
-  function draw_nop_dithered(paper,ns,nc,fv,rad,dim)
-  {
-    
-    // Creates canvas
-    //var paper = Raphael("raph", centr*2, centr*2);
-    paper.canvas.style.backgroundColor = '#f1f09f';
-
-    var centr=dim/2;
-
-    // Creates circle at x, y with radius rad
-    var circle = paper.circle(centr, centr, rad);
-    // Sets the fill attribute of the circle to white
-    circle.attr("fill", "#a0ee90");
-
-    for (i=0;i<nc;i++)
-    {
-      var an=i*360/nc;
-      draw_camera(paper,an,ns,fv,rad,dim,false,true);
-    }
-
-  }
-    
-
-
-    function draw_nop(paper,ns,nc,fv,rad,dim)
-  {
-    var centr=dim/2;
-    // Creates canvas
-    //var paper = Raphael("raph", centr*2, centr*2);
-    paper.canvas.style.backgroundColor = '#f1f09f';
-
-
-    // Creates circle at x, y with radius rad
-    var circle = paper.circle(centr, centr, rad);
-    // Sets the fill attribute of the circle to white
-    circle.attr("fill", "#a0ee90");
-
-    for (i=0;i<nc;i++)
-    {
-      var an=i*360/nc;
-      draw_camera(paper,an,ns,fv,rad,dim,false,false);
-
-    }
-
-  }
-
-*/
+   
     function draw_camera(paper,an,ns,fv,rad,dim,isorth,isdithered)
 {
       var centr=dim/2;
@@ -105,7 +37,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
       var tan_a=Math.tan(a);
       var x=rad/tan_a;
       var f=Math.sqrt(r*r+x*x)-r;
-      
+
       if (isorth)
       {
           var h1=r;
@@ -116,9 +48,9 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
           var h1=f*tan_a;
           var h2=(2*r+f)*tan_a;
       }
-    
+
       var q=2*h1/ns;
-  
+
       var elements = paper.set();
 
       //Drawing the trapezoid
@@ -195,7 +127,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
                 $( "#fov" ).slider("enable");
 
             }
-        
+
             draw_array(paper,ns,nc,fv,rad,dim,ispara,isdithered,isrand);
 
 
