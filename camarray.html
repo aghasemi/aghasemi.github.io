@@ -57,7 +57,7 @@
     <div data-role="main" class="ui-content" id="mainpage">
       <!-- <div data-role="controlgroup">-->
         <label for="nc" align="center">No. of Cameras:</label>
-        <input type="range" name="nc" id="nc" value="0" min="0" max="100" align="center" >
+        <input type="range" name="nc" id="nc" value="12" min="0" max="100" align="center" >
 
 
         <label for="ns" align="center">No. of Samples:</label>
@@ -70,12 +70,12 @@
 
 
         <fieldset data-role="controlgroup" data-type="horizontal" align="center">
-          <input type="radio" name="proj" id="proj0" value="choice-1"  />
+          <input type="radio" name="proj" id="proj0" value="choice-1"  checked="checked"/>
           <label for="proj0">Parallel</label>
-          <input type="radio" name="proj" id="proj1" value="choice-2"  checked="checked" />
+          <input type="radio" name="proj" id="proj1" value="choice-2"   />
           <label for="proj1">Pinhole</label>
-            
-            <label><input type="checkbox" name="dithered" id="dithered" checked="checked"/> Dithered</label>
+
+            <label><input type="checkbox" name="dithered" id="dithered"/> Dithered</label>
             <label><input type="checkbox" name="shuffled" id="shuffled"/> Shuffled</label>
 
         </fieldset>

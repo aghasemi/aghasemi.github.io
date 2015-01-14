@@ -28,7 +28,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
 
       }
 
-   
+
     function draw_camera(paper,an,ns,fv,rad,dim,isorth,isdithered)
 {
       var centr=dim/2;
@@ -42,11 +42,13 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
       {
           var h1=r;
           var h2=r;
+          var raycolor="#000000";
       }
       else
       {
           var h1=f*tan_a;
           var h2=(2*r+f)*tan_a;
+          var raycolor="#FF00FF";
       }
 
       var q=2*h1/ns;
@@ -79,7 +81,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
           holder=holder+rnd_jump;
           holder2=holder2+rnd_jump*h2/h1;
           var line = paper.path( ["M", centr+rad, holder, "L", centr-rad, holder2 ] );
-          line.attr({"stroke":"#FF00FF","stroke-width":1});
+          line.attr({"stroke":raycolor,"stroke-width":1});
           elements.push(line);
 
         }
