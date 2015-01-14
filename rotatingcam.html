@@ -63,20 +63,20 @@
         <label for="ns" align="center">No. of Samples:</label>
         <input type="range" name="ns" id="ns" value="5" min="1" max="100" align="center">
 
-        <label for="fov" align="center">Field of View:</label>
+        <label for="fov" align="center">Field of View: (degrees)</label>
         <input type="range" name="fov" id="fov" value="30" min="1" max="179" align="center">
 
-        <label for="sw" align="center">Sensor Width:</label>
+        <label for="sw" align="center">Sensor Width: (%)</label>
         <input type="range" name="sw" id="sw" value="20" min="1" max="200" align="center">
 
-        <label for="sr" align="center">Smaller Radius:</label>
-        <input type="range" name="sr" id="sr" value="10" min="1" max="100" align="center">
+        <label for="sr" align="center">Smaller Radius: (%)</label>
+        <input type="range" name="sr" id="sr" value="10" min="0" max="100" align="center">
 
 
         <fieldset data-role="controlgroup" data-type="horizontal" align="center">
-          <input type="radio" name="proj" id="proj0" value="choice-1"  checked="checked"/>
+          <input type="radio" name="proj" id="proj0" value="choice-1"  />
           <label for="proj0">Parallel</label>
-          <input type="radio" name="proj" id="proj1" value="choice-2"   />
+          <input type="radio" name="proj" id="proj1" value="choice-2"  checked="checked" />
           <label for="proj1">Pinhole</label>
 
             <label><input type="checkbox" name="dithered" id="dithered"/> Dithered</label>
