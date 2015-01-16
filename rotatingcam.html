@@ -72,6 +72,12 @@
         <label for="sr" align="center">Smaller Radius: (%)</label>
         <input type="range" name="sr" id="sr" value="10" min="0" max="100" align="center">
 
+        <div data-role="rangeslider" >
+          <label for="range-1a" align="center">Angular Baseline: (degrees)</label>
+          <input name="range-1a" id="range-1a" min="0" max="180" value="0" type="range" />
+          <label for="range-1b" align="center">Range on the circle:</label>
+          <input name="range-1b" id="range-1b" min="0" max="180" value="180" type="range" />
+        </div>
 
         <fieldset data-role="controlgroup" data-type="horizontal" align="center">
           <input type="radio" name="proj" id="proj0" value="choice-1"  />
@@ -125,6 +131,16 @@
           console.log('SR Changed '+nc);
           DrawRotCam(paper,dim,rad);
         });
+
+        $( "#range-1a" ).on( 'change', function( event ) {
+        //  console.log('Ra Changed '+$( "#range-1a" ).val());
+          DrawRotCam(paper,dim,rad)
+        });
+        $( "#range-1b" ).on( 'change', function( event ) {
+          //console.log('Rb Changed '+$( "#range-1b" ).val());
+          DrawRotCam(paper,dim,rad)
+        });
+
             $( "#proj0" ).on( 'change', function( event ) {
     			console.log('PP Changed '+nc);
     			DrawRotCam(paper,dim,rad)

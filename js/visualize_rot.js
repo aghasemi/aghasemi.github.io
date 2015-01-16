@@ -1,48 +1,20 @@
-function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
-  {
-        var centr=dim/2;
-        // Creates canvas
-        //var paper = Raphael("raph", centr*2, centr*2);
-        paper.canvas.style.backgroundColor = '#f1f09f';
 
 
-        // Creates circle at x, y with radius rad
-        var circle = paper.circle(centr, centr, rad);
-        // Sets the fill attribute of the circle to white
-        circle.attr("fill", "#a0ee90");
-
-
-
-        for (i=0;i<nc;i++)
-        {
-          if (isrand)
-          {
-              console.log('Shuffled');
-              var an=360*Math.random();
-          }
-          else
-          {
-            var an=i*360/nc;
-          }
-          draw_camera(paper,an,ns,fv,rad,dim,isorth,isdithered);
-
-        }
-
-  }
-
-  function draw_rot_array(paper,ns,nc,fv,rad,sr,sw,dim,isorth,isdithered,isrand)
+  function draw_rot_array(paper,ns,nc,fv,rad,sr,sw,dim,isorth,isdithered,isrand,ra,rb)
 {
   var centr=dim/2;
   // Creates canvas
   //var paper = Raphael("raph", centr*2, centr*2);
   paper.canvas.style.backgroundColor = '#f1f09f';
 
-
+  var baseline=rb-ra+0.0;
   // Creates circle at x, y with radius rad
   var circle = paper.circle(centr, centr, rad);
   // Sets the fill attribute of the circle to white
   circle.attr("fill", "#a0ee90");
 
+
+  console.log("AN--------"+baseline+"--"+ra+"--"+rb);
 
   var sradloc=sr*rad/100;
   var scircle = paper.circle(centr, centr, sradloc);
@@ -54,13 +26,17 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand)
     if (isrand)
     {
       console.log('Shuffled');
-      var an=360*Math.random();
+      var an=ra+baseline*Math.random();
     }
     else
     {
-      var an=i*360/nc;
+
+      var an=ra+i*baseline/(parseInt(nc)-1.0);
     }
-      draw_rotating_camera(paper,an,ns,fv,rad,sr,sw,dim,isorth,isdithered);
+    console.log("AN:"+an+" i "+i);
+    //Negative angle to be counter-clockwise
+      draw_rotating_camera(paper,-an,ns,fv,rad,sr,sw,dim,isorth,isdithered);
+
 
   }
 
@@ -167,6 +143,9 @@ function draw_rotating_camera(paper,an,ns,fv,rad,srad,sw,dim,isorth,isdithered)
   var fv=$( "#fov" ).val();
   var sw=$( "#sw" ).val();
   var sr=$( "#sr" ).val();
+  var ra=$( "#range-1a" ).val();
+  var rb=$( "#range-1b" ).val();
+
   var ispara=$('input:radio[name=proj]:checked').val().trim().indexOf('-1')>-1;
   var isdithered=$('#dithered:checked').length>0;
   var isrand=$('#shuffled:checked').length>0;
@@ -185,7 +164,7 @@ function draw_rotating_camera(paper,an,ns,fv,rad,srad,sw,dim,isorth,isdithered)
 
   }
 
-  draw_rot_array(paper,ns,nc,fv,rad,sr,sw,dim,ispara,isdithered,isrand);
+  draw_rot_array(paper,ns,nc,fv,rad,sr,sw,dim,ispara,isdithered,isrand,parseInt(ra),parseInt(rb));
 
 
 

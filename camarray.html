@@ -63,11 +63,16 @@
         <label for="ns" align="center">No. of Samples:</label>
         <input type="range" name="ns" id="ns" value="5" min="1" max="100" align="center">
 
-        <label for="fov" align="center">Field of View:</label>
+        <label for="fov" align="center">Field of View: (degrees)</label>
         <input type="range" name="fov" id="fov" value="30" min="1" max="179" align="center">
 
 
-
+        <div data-role="rangeslider" >
+          <label for="range-1a" align="center">Angular Baseline: (degrees)</label>
+          <input name="range-1a" id="range-1a" min="0" max="180" value="0" type="range" />
+          <label for="range-1b" align="center">Range on the circle:</label>
+          <input name="range-1b" id="range-1b" min="0" max="180" value="180" type="range" />
+        </div>
 
         <fieldset data-role="controlgroup" data-type="horizontal" align="center">
           <input type="radio" name="proj" id="proj0" value="choice-1"  checked="checked"/>
@@ -113,6 +118,14 @@
     			console.log('FoV Changed '+nc);
     			Draw(paper,dim,rad)
     		});
+        $( "#range-1a" ).on( 'change', function( event ) {
+          console.log('Ra Changed '+nc);
+          Draw(paper,dim,rad)
+        });
+        $( "#range-1b" ).on( 'change', function( event ) {
+          console.log('Rb Changed '+nc);
+          Draw(paper,dim,rad)
+        });
 
             $( "#proj0" ).on( 'change', function( event ) {
     			console.log('PP Changed '+nc);
