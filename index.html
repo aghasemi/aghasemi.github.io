@@ -117,200 +117,9 @@
 									My EPFL Infoscience profile:
 								</p>
                                 
-								<section>
-                                    <style>
-                                                                                    /* Jahia template */
-                                            h1 {
-                                                color: #999999;
-                                                font-size: 1.2em;
-                                                font-weight: bold;
-                                                margin: 0;
-                                                padding-top: 8px;
-                                                padding-bottom: 2px;
-                                                padding-left: 4px;
-                                            }
-
-                                            p {
-                                                margin: 0;
-                                                padding-top: 2px;
-                                                padding-bottom: 2px;
-                                                padding-left: 4px;
-                                            }
-
-                                            .clear {
-                                                clear: both;
-                                            }
-
-                                            p.img {
-                                                clear: both;
-                                            }
-
-
-                                            /* Export block */
-                                            .infoscience_export{
-                                                color: black;
-                                                font-family:Times;
-                                            }
-                                            .infoscience_export p {
-                                                line-height:1.2em;
-                                                margin: 0 0 0.5em 0;
-                                                padding: 0;
-                                            }
-                                            .infoscience_export a:link, .infoscience_export a:active {
-                                                color:#036;
-                                                font-weight: bold;
-                                                text-decoration: none;
-                                            }
-                                            .infoscience_export a:visited, .infoscience_export a:hover {
-                                                color: #336699;
-                                                font-weight: bold;
-                                                text-decoration: none;
-                                            }
-
-                                            /* Each record (bullets + data)*/
-                                            .infoscience_record {
-                                            }
-
-                                            /* bullet (div) */
-                                            .infoscience_bullet {
-                                                float:left;
-                                                text-align:right;
-                                                width:3em
-                                            }
-                                            /* record itself (div) */
-                                            .infoscience_data {
-                                                margin: 0 3.5em 2em 3.5em
-                                            }
-
-                                            /* first level heading (e.g. doctype) */
-                                            .infoscience_header1 {
-                                                font-size: 1.5em;
-                                                color: #180346;
-                                                font-family: Arial, Helvetica, Sans-Serif, Verdana ;
-                                                font-weight: bold;
-                                                margin: 0px;
-                                                padding-top: 8px;
-                                                padding-bottom: 2px;
-                                                padding-left: 4px;
-                                                text-align:center;
-                                            }
-
-                                            /* second level heading (e.g. year) */
-                                            .infoscience_header2 {
-                                                font-size:1.1em;
-                                                text-align: left;
-                                                color: #180346;
-                                                font-weight: bold;
-                                                font-family: Arial, Helvetica, Sans-Serif, Verdana ;
-                                                border-bottom: 1px #180346 solid;
-                                                margin-bottom:  2em;
-                                                padding: 0px;
-                                            }
-
-                                            /* title of publication, detailed format */
-                                            h3.infoscience_title {
-                                                color: black;
-                                                font-size: 1.0em;
-                                                text-align:center;
-                                                font-weight: bold;
-                                                margin: 0;
-                                                padding-top: 0;
-                                                padding-bottom: 0.8em;
-                                            }
-
-                                            /* Name, place and date of conference */
-                                            .infoscience_conference{
-                                            }
-
-                                            /* series */
-                                            .infoscience_series{
-                                            }
-
-                                            /* list of authors */
-                                            .infoscience_authors{
-                                                font-style: italic;
-                                                text-align: center;
-                                            }
-
-                                            /* single author */
-                                            .infoscience_author{
-
-                                            }
-
-                                            /* Journal, proceedings, book in case of book chapter*/
-                                            .infoscience_host{
-                                            }
-                                            span.infoscience_host{
-                                                font-style: italic;
-                                            }
-
-                                            /* Abstract */
-                                            .infoscience_abstract{
-                                               text-align: justify; 
-                                            }
-
-                                            .infoscience_abstract:first-letter{
-                                                font-size:2.48em;
-                                                float:left;
-                                                line-height: 1.0em;
-                                                margin-right:0.1em;
-                                                margin-bottom: -0.1em;
-                                                font-weight: bold;
-                                                color: #180346;
-
-                                            }
-
-                                            /* Links under publication */
-                                            .infoscience_links{
-                                            }
-
-                                            .infoscience_links a:link{
-                                                color: #180346;
-                                                font-weight: bold;
-                                            }
-                                            .infoscience_links a:hover{
-                                                color: rgb(153,153,204);
-                                                font-weight: bold;
-                                            }
-
-                                            .infoscience_links a:visited{
-                                                color: rgb(153,153,204);
-                                                font-weight: bold;
-                                            }
-
-                                            /* Link to detailed record */
-                                            .infoscience_link_detailed{
-                                                background-image: url('../img/infoscience-icon2.png');
-                                                background-repeat: no-repeat;
-                                                background-position: center left;
-                                                padding-left: 12px;
-                                                line-height:50px;
-                                            }
-
-                                            /* link to fulltext */
-                                            .infoscience_link_fulltext{
-                                            }
-
-                                            /* Link to official version (using DOI) */
-                                            .infoscience_link_official{
-                                                background-image: url('../img/doi.gif');
-                                                background-repeat: no-repeat;
-                                                background-position: center left;
-                                                padding-left: 20px;
-                                                line-height:50px;
-                                            }
-
-                                            /* link to bibtex format */
-                                            .infoscience_link_bibtex{
-                                            }
-
-                                            /* link to endnote format */
-                                            .infoscience_link_endnote{
-                                            }
-                                    </style>
-									<iframe src="http://infoscience.epfl.ch/curator/export/9821/?ln=en" width="800" height="1800" frameborder="0">
+								
+									<iframe name="infs" id="infs" src="http://infoscience.epfl.ch/curator/export/9821/?ln=en" width="800" height="1000" frameborder="0">
                                     </iframe>
-								</section>
 							</article>
 
 						<!-- Contact -->
@@ -357,6 +166,16 @@
 					</div>
 
 			</div>
+        <script>
+
+	  	$(function() {
+            var $head = $("#infs").contents().find("head");
+
+            $head.append($("<link/>",
+                { rel: "stylesheet", href: "css/example2.css", type: "text/css" }
+              ));
+		});
+      </script>
 
 	</body>
 </html>
