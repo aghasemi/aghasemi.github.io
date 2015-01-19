@@ -60,6 +60,7 @@
 
     <div data-role="main" class="ui-content" id="mainpage">
       <!-- <div data-role="controlgroup">-->
+
         <label for="nc" align="center">No. of Cameras:</label>
         <input type="range" name="nc" id="nc" value="12" min="0" max="100" align="center" >
 
@@ -77,10 +78,12 @@
           <label for="range-1b" align="center">Range on the circle:</label>
           <input name="range-1b" id="range-1b" min="0" max="360" value="360" type="range" />
         </div>
+
         <div align="center">
           <input type="text" class="circle-range-select" value="0;360" align="center" id="cira" name="cira"/>
 
         </div>
+
         <fieldset data-role="controlgroup" data-type="horizontal" align="center">
           <input type="radio" name="proj" id="proj0" value="choice-1"  checked="checked"/>
           <label for="proj0">Parallel</label>
@@ -104,75 +107,79 @@
       <div id="bar"></div>
 
       <button align="center" class="ui-btn" name="sv" id="sv">Refresh</button>
-      <script>jQuery('input.circle-range-select').lcnCircleRangeSelect();</script>
-      <script>
 
-	  	$(function() {
-	  		var dim=Math.min(Math.floor($( "#mainpage" ).width()*0.65),400);
-			var rad=dim/4;
-	  		var paper = Raphael("raph", dim, dim);
-	  		Draw(paper,dim,rad);
-    		$( "#nc" ).on( 'change', function( event ) {
-    			console.log('NC Changed '+nc);
-    			Draw(paper,dim,rad);
-    		});
-			$( "#ns" ).on( 'change', function( event ) {
-    			console.log('NS Changed '+nc);
-    			Draw(paper,dim,rad);
-    		});
-
-            $( "#fov" ).on( 'change', function( event ) {
-    			console.log('FoV Changed '+nc);
-    			Draw(paper,dim,rad)
-    		});
-        $( "#range-1a" ).on( 'change', function( event ) {
-          console.log('Ra Changed '+nc);
-          Draw(paper,dim,rad)
-        });
-        $( "#range-1b" ).on( 'change', function( event ) {
-          console.log('Rb Changed '+nc);
-          Draw(paper,dim,rad)
-        });
-
-            $( "#proj0" ).on( 'change', function( event ) {
-    			console.log('PP Changed '+nc);
-    			Draw(paper,dim,rad)
-    		});
-            $( "#proj1" ).on( 'change', function( event ) {
-    			console.log('OP Changed '+nc);
-    			Draw(paper,dim,rad)
-    		});
-
-        $( "#cira" ).on( 'change', function( event ) {
-          console.log('Cira Changed '+$( "#cira" ).val());
-          Draw(paper,dim,rad)
-        });
-
-            $( "#dithered" ).on( 'change', function( event ) {
-    			console.log('DI Changed '+nc);
-    			Draw(paper,dim,rad)
-    		});
-            $( "#shuffled" ).on( 'change', function( event ) {
-    			console.log('RN Changed '+nc);
-    			Draw(paper,dim,rad)
-    		});
-
-
-			 $( "#sv" ).on( 'click', function( event ) {
-    			console.log('Clicked '+nc);
-    			Draw(paper,dim,rad);
-
-          //var svg = paper.toSVG();
-
-          //document.getElementById('bar').innerHTML = svg;
-
-    		});
-
-
-		});
-      </script>
 
     </div>
+
+    <script>jQuery('input.circle-range-select').lcnCircleRangeSelect();</script>
+    <script>
+
+    $(function() {
+      var dim=Math.min(Math.floor($( "#mainpage" ).width()*0.65),400);
+      var rad=dim/4;
+      var paper = Raphael("raph", dim, dim);
+      Draw(paper,dim,rad);
+      $( "#nc" ).on( 'change', function( event ) {
+        console.log('NC Changed '+nc);
+        Draw(paper,dim,rad);
+      });
+      $( "#ns" ).on( 'change', function( event ) {
+        console.log('NS Changed '+nc);
+        Draw(paper,dim,rad);
+      });
+
+      $( "#fov" ).on( 'change', function( event ) {
+        console.log('FoV Changed '+nc);
+        Draw(paper,dim,rad)
+      });
+      $( "#range-1a" ).on( 'change', function( event ) {
+        console.log('Ra Changed '+nc);
+        Draw(paper,dim,rad)
+      });
+      $( "#range-1b" ).on( 'change', function( event ) {
+        console.log('Rb Changed '+nc);
+        Draw(paper,dim,rad)
+      });
+
+      $( "#proj0" ).on( 'change', function( event ) {
+        console.log('PP Changed '+nc);
+        Draw(paper,dim,rad)
+      });
+      $( "#proj1" ).on( 'change', function( event ) {
+        console.log('OP Changed '+nc);
+        Draw(paper,dim,rad)
+      });
+
+      $( "#cira" ).on( 'change', function( event ) {
+        console.log('Cira Changed '+$( "#cira" ).val());
+        Draw(paper,dim,rad)
+      });
+
+      $( "#dithered" ).on( 'change', function( event ) {
+        console.log('DI Changed '+nc);
+        Draw(paper,dim,rad)
+      });
+      $( "#shuffled" ).on( 'change', function( event ) {
+        console.log('RN Changed '+nc);
+        Draw(paper,dim,rad)
+      });
+
+
+      $( "#sv" ).on( 'click', function( event ) {
+        console.log('Clicked '+nc);
+        Draw(paper,dim,rad);
+
+        //var svg = paper.toSVG();
+
+        //document.getElementById('bar').innerHTML = svg;
+
+      });
+
+
+    });
+  </script>
+
+
 
     <div align="center" data-role="footer">
       Provided by LCAV@EPFL
