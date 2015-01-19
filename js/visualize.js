@@ -9,7 +9,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
 
         var spacing=baseline/parseInt(nc);
 
-        var loc=ra;
+        var loc=ra+baseline/(2*parseInt(nc));
         // Creates circle at x, y with radius rad
         var circle = paper.circle(centr, centr, rad);
         // Sets the fill attribute of the circle to white
