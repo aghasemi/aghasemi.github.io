@@ -8,6 +8,12 @@
   paper.canvas.style.backgroundColor = '#f1f09f';
 
   var baseline=rb-ra+0.0;
+
+  var spacing=baseline/parseInt(nc);
+
+  var loc=ra+baseline/(2*parseInt(nc));
+
+
   // Creates circle at x, y with radius rad
   var circle = paper.circle(centr, centr, rad);
   // Sets the fill attribute of the circle to white
@@ -31,12 +37,13 @@
     else
     {
 
-      var an=ra+i*baseline/(parseInt(nc)-1.0);
+      var an=loc;
     }
     console.log("AN:"+an+" i "+i);
     //Negative angle to be counter-clockwise
       draw_rotating_camera(paper,-an,ns,fv,rad,sr,sw,dim,isorth,isdithered);
-
+      loc=loc+spacing;
+      
 
   }
 
