@@ -122,6 +122,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
       var fv=$( "#fov" ).val();
       var ra=$( "#range-1a" ).val();
       var rb=$( "#range-1b" ).val();
+      var ranges=$( "#cira" ).val().split(";");
 
             var ispara=$('input:radio[name=proj]:checked').val().trim().indexOf('-1')>-1;
             var isdithered=$('#dithered:checked').length>0;
@@ -139,7 +140,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
 
             }
 
-            draw_array(paper,ns,nc,fv,rad,dim,ispara,isdithered,isrand,parseInt(ra),parseInt(rb));
+            draw_array(paper,ns,nc,fv,rad,dim,ispara,isdithered,isrand,parseInt(ranges[0]),parseInt(ranges[1]));
 
 
 

@@ -20,7 +20,7 @@
   circle.attr("fill", "#a0ee90");
 
 
-  console.log("AN--------"+baseline+"--"+ra+"--"+rb);
+  //console.log("AN--------"+baseline+"--"+ra+"--"+rb);
 
   var sradloc=sr*rad/100;
   var scircle = paper.circle(centr, centr, sradloc);
@@ -39,11 +39,11 @@
 
       var an=loc;
     }
-    console.log("AN:"+an+" i "+i);
+    //console.log("AN:"+an+" i "+i);
     //Negative angle to be counter-clockwise
       draw_rotating_camera(paper,-an,ns,fv,rad,sr,sw,dim,isorth,isdithered);
       loc=loc+spacing;
-      
+
 
   }
 
@@ -152,7 +152,7 @@ function draw_rotating_camera(paper,an,ns,fv,rad,srad,sw,dim,isorth,isdithered)
   var sr=$( "#sr" ).val();
   var ra=$( "#range-1a" ).val();
   var rb=$( "#range-1b" ).val();
-
+  var ranges=$( "#cira" ).val().split(";");
   var ispara=$('input:radio[name=proj]:checked').val().trim().indexOf('-1')>-1;
   var isdithered=$('#dithered:checked').length>0;
   var isrand=$('#shuffled:checked').length>0;
@@ -171,7 +171,7 @@ function draw_rotating_camera(paper,an,ns,fv,rad,srad,sw,dim,isorth,isdithered)
 
   }
 
-  draw_rot_array(paper,ns,nc,fv,rad,sr,sw,dim,ispara,isdithered,isrand,parseInt(ra),parseInt(rb));
+  draw_rot_array(paper,ns,nc,fv,rad,sr,sw,dim,ispara,isdithered,isrand,parseInt(ranges[0]),parseInt(ranges[1]));
 
 
 
