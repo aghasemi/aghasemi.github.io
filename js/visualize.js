@@ -6,6 +6,10 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
         paper.canvas.style.backgroundColor = '#f1f09f';
 
         var baseline=rb-ra;
+
+        var spacing=baseline/parseInt(nc);
+
+        var loc=ra;
         // Creates circle at x, y with radius rad
         var circle = paper.circle(centr, centr, rad);
         // Sets the fill attribute of the circle to white
@@ -22,11 +26,11 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
           }
           else
           {
-            var an=ra+i*baseline/(parseInt(nc)-1.0);
+            var an=loc;
           }
           //Negative angle to be counter-clockwise
           draw_camera(paper,-an,ns,fv,rad,dim,isorth,isdithered);
-
+          loc=loc+spacing;
         }
 
   }
