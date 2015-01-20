@@ -7,7 +7,14 @@
   //var paper = Raphael("raph", centr*2, centr*2);
   paper.canvas.style.backgroundColor = '#f1f09f';
 
-  var baseline=rb-ra+0.0;
+  if (rb>ra)
+  {
+    var baseline=(rb-ra+0.0);
+  }
+  else
+  {
+    var baseline=(rb+360.0-ra);
+  }
 
   var spacing=baseline/parseInt(nc);
 

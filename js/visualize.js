@@ -4,8 +4,14 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
         // Creates canvas
         //var paper = Raphael("raph", centr*2, centr*2);
         paper.canvas.style.backgroundColor = '#f1f09f';
-
-        var baseline=rb-ra;
+        if (rb>ra)
+        {
+          var baseline=(rb-ra);
+        }
+        else
+        {
+          var baseline=(rb+360-ra);
+        }
 
         var spacing=baseline/parseInt(nc);
 
@@ -14,8 +20,8 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
         var circle = paper.circle(centr, centr, rad);
         // Sets the fill attribute of the circle to white
         circle.attr("fill", "#a0ee90");
-
-
+        console.log("BL: "+baseline);
+        console.log("SP: "+spacing);
 
         for (i=0;i<nc;i++)
         {
@@ -28,6 +34,7 @@ function draw_array(paper,ns,nc,fv,rad,dim,isorth,isdithered,isrand,ra,rb)
           {
             var an=loc;
           }
+          console.log("LOC: "+loc);
           //Negative angle to be counter-clockwise
           draw_camera(paper,-an,ns,fv,rad,dim,isorth,isdithered);
           loc=loc+spacing;
