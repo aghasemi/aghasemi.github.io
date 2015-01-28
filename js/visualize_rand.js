@@ -120,7 +120,7 @@ function draw_random_camera(paper,an,ns,fv,sw,dim,isorth,isdithered,dx,dy)
   {
     if (isdithered)
     {
-      var rnd_jump=Math.random()*q;
+      var rnd_jump=Math.log(1-Math.random())*(-q);
     }
     else
     {
