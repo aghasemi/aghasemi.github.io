@@ -159,6 +159,10 @@ function draw_random_camera(paper,an,ns,fv,sw,dim,isorth,isdithered,dx,dy)
 
   function DrawRotCam(paper,dim,rad)
 {
+  
+    
+  //$( "#raph" ).show( "scale",{percent:100} );
+
   var nc=$( "#nc" ).val();
   var ns=$( "#ns" ).val();
   var fv=$( "#fov" ).val();
