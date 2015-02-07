@@ -62,11 +62,11 @@
     <div data-role="main" class="ui-content" id="mainpage">
       <!-- <div data-role="controlgroup">-->
         <label for="nc" align="center">No. of Cameras:</label>
-        <input type="range" name="nc" id="nc" value="2" min="0" max="100" align="center" >
+        <input type="range" name="nc" id="nc" value="2" min="2" max="100" align="center" >
 
 
         <label for="ns" align="center">No. of Samples:</label>
-        <input type="range" name="ns" id="ns" value="5" min="1" max="100" align="center">
+        <input type="range" name="ns" id="ns" value="4" min="4" max="100" step="2" align="center">
 
         <label for="fov" align="center">Field of View: (degrees)</label>
         <input type="range" name="fov" id="fov" value="30" min="1" max="179" align="center">
@@ -77,6 +77,9 @@
 
         <label for="zmax" align="center">Maximum Depth: (meters)</label>
         <input type="range" name="zmax" id="zmax" value="5" min="0" max="100" align="center">
+
+        <label for="cw" align="center">Canvas Width: (pixels)</label>
+        <input type="range" name="cw" id="cw" value="500" min="100" max="1000" align="center">
 
 
         <fieldset data-role="controlgroup" data-type="horizontal" align="center">
@@ -108,13 +111,11 @@
 
 
         var paperWidth=Math.min(Math.floor($( "#mainpage" ).height()*0.85),900);
+        $( "#cw" ).val(Math.floor(paperWidth/1.5));
         var paperHeight=parseInt(zmax)*100;
 
         var paper = Raphael("raph", paperWidth, paperHeight);
         //paper.clear();
-
-
-
 
         DrawLinCam(paper);
     		$( "#nc" ).on( 'change', function( event ) {
@@ -140,6 +141,10 @@
           DrawLinCam(paper)
         });
 
+        $( "#cw" ).on( 'change', function( event ) {
+          //console.log('Rb Changed '+$( "#range-1b" ).val());
+          DrawLinCam(paper)
+        });
 
 
 

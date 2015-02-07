@@ -138,6 +138,8 @@ function draw_vertical_camera(paper,loc,ns,fv,isdithered,raycolor)
     var fv=parseInt($( "#fov" ).val());
     var bl=parseFloat($( "#bl" ).val());
     var zmax=parseInt($( "#zmax" ).val());
+    var cw=parseInt($( "#cw" ).val());
+
     var isdithered=$('#dithered:checked').length>0;
     var isrand=$('#shuffled:checked').length>0;
 
@@ -149,7 +151,7 @@ function draw_vertical_camera(paper,loc,ns,fv,isdithered,raycolor)
     //console.log(typeof(parseInt(zmax)));
 
     var paperWidth=Math.min(Math.floor($( "#mainpage" ).width()*0.95),9000);
-    var paperHeight=500;
+    var paperHeight=cw;
     bl=bl*paperHeight/zmax;
 
     paper.setSize(paperWidth,paperHeight);
