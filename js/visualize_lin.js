@@ -12,7 +12,6 @@
   // Sets the fill attribute of the circle to white
   //circle.attr("fill", "#a0ee90");
 
-  var colors = ['red', 'green', 'blue', 'magenta', 'orange'];
 
 
   var locStart=centr-bl/2;
@@ -21,12 +20,12 @@
   //At least one cam?
   if (nc>=1)
   {
-    draw_vertical_camera(paper,locStart,ns,fv,isdithered,colors[0])
+    draw_vertical_camera(paper,locStart,ns,fv,isdithered)
   }
   //At least two?
   if (nc>=2)
   {
-    draw_vertical_camera(paper,locEnd,ns,fv,isdithered,colors[1])
+    draw_vertical_camera(paper,locEnd,ns,fv,isdithered)
   }
   //The rest in between
   var spacing=bl/(nc-1);
@@ -41,7 +40,7 @@
 
       var loc=locStart+i*spacing;
     }
-    draw_vertical_camera(paper,loc,ns,fv,isdithered,colors[(i+1)%colors.length])
+    draw_vertical_camera(paper,loc,ns,fv,isdithered)
 
 
   }
@@ -58,8 +57,9 @@
 
 
 //Draws inly pinhole cameras
-function draw_vertical_camera(paper,loc,ns,fv,isdithered,raycolor)
+function draw_vertical_camera(paper,loc,ns,fv,isdithered)
 {
+  var colors = ['red', 'green', 'blue', 'magenta', 'orange'];
 
   var a=Math.PI*fv/360;
   var tan_a=Math.tan(a);
@@ -81,8 +81,8 @@ function draw_vertical_camera(paper,loc,ns,fv,isdithered,raycolor)
     var line2 = paper.path( ["M", loc, paper.height, "L", sensorEnd, 0] );
     var line3 = paper.path( ["M",sensorStart, 0, "L", sensorEnd, 0] );
 
-    line1.attr({"stroke":raycolor,"stroke-width":1});
-    line2.attr({"stroke":raycolor,"stroke-width":1});
+    line1.attr({"stroke":colors[0],"stroke-width":1});
+    line2.attr({"stroke":colors[1],"stroke-width":1});
 
 
   }
@@ -97,7 +97,7 @@ function draw_vertical_camera(paper,loc,ns,fv,isdithered,raycolor)
   var holder=sensorStart;
   //var holder2=centr-h2;
 
-  //for (j=1;j<ns-1;j++)
+  var col=2;
   while (sensorEnd-holder>q)
   {
     if (isdithered)
@@ -115,7 +115,7 @@ function draw_vertical_camera(paper,loc,ns,fv,isdithered,raycolor)
       var line = paper.path( ["M", loc, paper.height, "L", holder,0 ] );
     }
 
-    line.attr({"stroke":raycolor,"stroke-width":1});
+    line.attr({"stroke":colors[(col++)%colors.length],"stroke-width":1});
     elements.push(line);
 
   }
