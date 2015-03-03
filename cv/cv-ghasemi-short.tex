@@ -1,0 +1,312 @@
+\documentclass[a4paper]{article}
+ \usepackage{fullpage}
+%\usepackage[utf8]{inputenc}
+%\usepackage[LFE,LAE]{fontenc}
+%\usepackage[english,farsi]{babel}
+\usepackage{color,graphicx}
+\usepackage{wrapfig}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{appendix}
+%\usepackage{basmala}
+\usepackage[urlcolor=black,colorlinks=true]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@dottedtocline#1#2#3#4#5{%
+   \ifnum #1>\c@tocdepth \else
+     \vskip \z@ \@plus.2\p@
+     {\if@rlmain\rightskip\else\leftskip\fi #2\relax
+       \if@rlmain\leftskip\else\rightskip\fi \@tocrmarg \parfillskip
+       -\if@rlmain\leftskip\else\rightskip\fi
+      \parindent #2\relax\@afterindenttrue
+      \interlinepenalty\@M
+      \leavevmode
+      \@tempdima #3\relax
+      \advance\if@rlmain\rightskip\else\leftskip\fi \@tempdima
+      \null\nobreak\hskip -\if@rlmain\rightskip\else\leftskip\fi
+      {#4}\nobreak
+      \leaders\hbox{$\m@th
+         \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+         mu$}\hfill
+      \nobreak
+      \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor \if@rlmain 
+\if@farsi\EI{#5}\else\I{#5}\fi\else\textLR{#5}\fi}
+      \par}%
+   \fi}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+\newcounter{prob_num}
+\font\boldsc=cmbcsc10 at 40pt
+\setcounter{prob_num}{1}
+\newcommand{\testone}[5]{\bigskip \bigskip\textbf{\arabic{prob_num}-} \stepcounter{prob_num} \textbf{#1} \par\nopagebreak[4]\medskip\hspace{5pt} 1)\ #2\hfill 2)\ #3\hfill 
+3)\ #4\hfill 4)\ #5\hfill \par\nopagebreak[4]\medskip}
+\newcommand{\testtwolr}[5]{\bigskip \bigskip\textbf{\arabic{prob_num}-} \stepcounter{prob_num} \textbf{#1} \par\nopagebreak[4]\medskip 
+\begin{tabular}{ l l}
+1) #2 & 2) #3 \\
+ 3) #4 & 4) #5 \\
+\end{tabular}
+\par\nopagebreak[4]\medskip}
+% Use a new style for definitions
+\newcommand{\testtwofr}[5]{\bigskip \bigskip\textbf{\arabic{prob_num}-} \stepcounter{prob_num} \textbf{#1} \par\nopagebreak[4]\medskip 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\begin{tabular}{ r r}
+1) #2 & 2) #3 \\
+ 3) #4 & 4) #5 \\
+\end{tabular}
+\par\nopagebreak[4]\medskip}
+
+\newcommand{\testfour}[5]{\bigskip \bigskip\textbf{\arabic{prob_num}-} \stepcounter{prob_num} \textbf{#1} \par\nopagebreak[4]\medskip\hspace{5pt} 1)\ #2\par\nopagebreak[4]\medskip\hspace{5pt} 2)\ #3\par\nopagebreak[4]\medskip\hspace{5pt} 
+3)\ #4\par\nopagebreak[4]\medskip\hspace{5pt} 4)\ #5 \par\nopagebreak[4]\medskip}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\pagenumbering{roman}
+\theoremstyle{definition}
+\newtheorem{dfn}{تعريف}
+\title{Curriculum Vitae}
+ \date{January 2010}
+ \author{Alireza Ghasemi}
+\begin{document}
+%\selectlanguage{english}
+%\maketitle
+\begin{center}
+% Upper part of the page
+%\includegraphics[width=0.15\textwidth]{./logo}\\[1cm]
+%\textsc{In the name of God}\\[1.5cm]
+\HRule \\[0.2cm]
+
+%\textsc{\Large Curriculum Vitae}\\[0.5cm]
+% Title
+{ \Huge{{\textsc{Alireza Ghasemi}}}}\\[0.2cm]
+
+% Author and supervisor
+%\begin{minipage}{0.4\textwidth}
+%\begin{center} 
+%{\small \emph{Postal Code:} 14747-33315\\
+%\emph{Cell Phone:} +98 912 710 3478 \hfill
+%\emph{E-Mail:} \href{mailto:ghasemi.a.ir@gmail.com}{ghasemi.a.ir@gmail.com}}\\
+%\end{center}
+%\end{minipage}
+%\begin{minipage}{0.9\textwidth}
+\begin{center} 
+{\small School of Computer and Communication Sciences\\
+\'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne\\
+Lausanne, Switzerland.\\[0.2cm]
+
+\emph{Cell Phone:} +41 78 677 5131 \hfill
+\emph{E-Mail:} \href{mailto:alireza.ghasemi@epfl.ch}{alireza.ghasemi@epfl.ch}\\
+\emph{Born:} 18 April 1987, Esfahan, Iran\\
+\emph{Homepage: \url{http://people.epfl.ch/alireza.ghasemi}} }
+
+\end{center}
+%\end{minipage}\\[0.2cm]
+%\vfill
+%\bigskip
+% Bottom of the page
+{\large Fall 2014}\\[0.2cm]
+\HRule \\[0.2cm]
+
+\end{center}
+
+\setcounter{prob_num}{1}
+\newcommand{\hlmar}[1]{\it{#1}\marginpar{#1}}
+
+\section{Research Interests}
+\begin{itemize}
+\item { Computer Vision and Image Processing} (Content-Based Image Retrieval, Video Analysis, Light-Field Imaging, Augmented Reality)
+\item { Machine Learning and Pattern Recognition} (Semi-Supervised and Active Learning, One-Class Learning, Multi-view Learning)
+\item { Information Retrieval and Data Mining} (Text Classification, Rank and Metric Learning)
+\end{itemize}
+
+
+\section{Education}
+\begin{itemize}
+
+\item PhD Student of Computer and Communication Sciences, \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne, Lausanne, Switzerland, 2011-Present 
+
+%\begin{itemize}
+%\item \emph{Thesis Title:} Content-Based Image Retrieval Using Relevance Feedback and Semi-Supervised Learning 
+%	\begin{itemize}
+%		\item Grade: $\frac{20}{20}$
+%	\end{itemize}
+%
+%\item \emph{Overall GPA:} $\frac{19.52}{20}$
+%\end{itemize}
+
+
+\item M. Sc. in Computer Engineering - Artificial Intelligence, Sharif University of Technology, Tehran, Iran, 2009-2011 
+
+%\begin{itemize}
+%\item \emph{Thesis Title:} Content-Based Image Retrieval Using Relevance Feedback and Semi-Supervised Learning 
+%	\begin{itemize}
+%		\item Grade: $\frac{20}{20}$
+%	\end{itemize}
+%
+%\item \emph{Overall GPA:} $\frac{19.52}{20}$
+%\end{itemize}
+
+\item B. Sc. in Computer Engineering, Sharif University of Technology, Tehran, Iran, 2005-2009 
+
+%\begin{itemize}
+%\item \emph{Major:} Software Engineering
+%\item \emph{Overall GPA:} $\frac{17.48}{20}$
+%\item \emph{Last year's GPA:} Fall: $\frac{19.56}{20}$ Spring: $\frac{17.48}{20}$
+%\end{itemize}
+%\item Diploma in Mathematics and Physics Discipline, Shahid Ejei High School (Part of \href{http://en.wikipedia.org/wiki/National_Organization_for_Development_of_Exceptional_Talents}{NODET}), Esfahan, Iran, 2001-2005
+
+\end{itemize}
+\section{Selected Honors and Awards}
+\begin{itemize}
+\item Granted Full One-Year Fellowship to Start PhD at  \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne, Starting from Fall 2011.
+\item Ranked 1$^{st}$ by GPA Among All Artificial Intelligence Students in Sharif University of Technology, Summer 2011.
+%\item Ranked 1$^{st}$ in Nationwide Graduate Entrance Qualification Exam in Artificial Intelligence Branch of Computer Engineering, among more than 17000 applicants, Spring 2009.
+\item Ranked 1$^{st}$ in Nationwide Graduate Entrance Qualification Exam in IT Engineering, among more than 13000 applicants, Spring 2009.
+%\item Ranked 5$^{th}$ in First Round of Scientific Students' Olympiad, Computer Engineering,(Ranked 13$^{th}$ in Final Round), Summer 2009.
+\item Honorary Admission for Graduate Study in Sharif University of Technology, Fall 2008.
+%\item Ranked 183$^{rd}$ in Nationwide University Entrance Exam (Among more than 300000 students), Mathematics and Physics Discipline, Summer 2005.
+%\item Ranked 33$^{rd}$ in Nationwide University Entrance Exam, Foreign Languages Discipline (Among more than 500000 students), Summer 2005.
+\end{itemize}
+\section{Publications}
+\subsection{Patents}
+\begin{itemize}
+
+\item \textbf{Alireza Ghasemi}, Laurent Rime, Martin Vetterli, \textit{Distinguishing real scenes from printed photos using a light-field camera}. US-61898739, Provisional Patent Filed November 2013.
+\item \textbf{Alireza Ghasemi}, Laurent Rime, Martin Vetterli:\textit{ Method and Apparatus for Identifying Local Features}. Swiss Patent No. 2013CH-1102, Filed June 2013. 
+\end{itemize}
+
+\subsection{Selected Papers}
+\begin{itemize}
+
+\item \textbf{Alireza Ghasemi} and Martin Vetterli:\textit{ Detecting Planar Surface Using a Light-Field Camera with Application
+to Distinguishing Real Scenes From Printed Photos}.  ICASSP 2014, Florence ,Italy.
+
+%\item \textbf{Alireza Ghasemi}, Mahdad Hosseini Kamal  and Martin Vetterli:\textit{ Computationally Efficient Background Subtraction in the Light Field Domain}.  IS\&T/SPIE Electronic Imaging 2014, San Francisco. California, USA, February 2-6, 2014.
+
+%\item \textbf{Alireza Ghasemi}, Nelly Afonso  and Martin Vetterli:\textit{ LCAV-31: A Dataset for Light Field Object Recognition}.  IS\&T/SPIE Electronic Imaging 2014, San Francisco. California, USA, February 2-6, 2014.
+
+\item \textbf{Alireza Ghasemi} and Martin Vetterli,:\textit{ Scale-Invariant Representation of Light Field Images for Object Recognition and Tracking}.  IS\&T/SPIE Electronic Imaging 2014, San Francisco. California, USA, February 2-6, 2014.
+
+
+
+\item Claudiu Cristian Musat, \textbf{Alireza Ghasemi}, Boi Faltings:\textit{Sentiment Analysis Using a Novel Human Computation Game}.  ACL 2012 People's Web Meets NLP Workshop, 2012.
+
+\item \textbf{Alireza Ghasemi}, Hamid R. Rabiee,  Mohammad T. Manzuri, Mohammad H. Rohban:\textit{ A Bayesian Approach to the Data Description Problem}.  AAAI Twenty-Sixth Conference on Artificial Intelligence (AAAI-12), 2012
+
+%\item Amirhossein Tavanaei,\textbf{ Alireza Ghasemi}, Mohammad Tavanaei, Hossein Sameti, Mohammad T. Manzuri:\textit{Support Vector Data Description for Spoken Digit Recognition}. International Conference on Bio-inspired Systems and Signal Processing (BIOSIGNALS 2012), 2012:32-37.
+
+\item \textbf{Alireza Ghasemi}, Hamid R. Rabiee, Mohsen Fadaee, Mohammad T. Manzuri, Mohammad H. Rohban:\textit{ Active Learning from Positive and Unlabeled Data}. IEEE ICDM 2011 Workshop on Optimization Based Methods for Emerging Data Mining Problems (OEDM'11), 2011:244-250.
+
+%\item \textbf{Alireza Ghasemi}, Mohammad T. Manzuri, Hamid R. Rabiee, Mohammad H. Rohban, Siavash Haghiri:\textit{Active One-Class Learning by Kernel Density Estimation}. IEEE International Workshop on Machine Learning for Signal Processing (MLSP'11), 2011:1-6.
+
+
+
+
+%\item \emph{Reducing Time Complexity of SVDD by Density-Based Subsampling}, In Preparation, 2011.
+%\item \emph{On the Relation Between Support Vector Data Description and One-Class Gaussian Processes}, In Preparation, 2011.
+%\item \emph{Analysis of Image-Extracted Features for Applicability in Semi-Supervised Learning}, In Preparation, 2010.
+%\item \emph{A Positional Term Weighting Method for Information Retrieval and Text Classification Tasks, Based on PageRank Algorithm}, In Preparation, 2010.
+%\item \emph{Recognition of Classic Persian Poem from Ordinary Text }, Saeed Mohajery, Mohammadreza Besharati, {\bf Alireza Ghasemi}, Iran Data Mining Conference, 2010.
+
+
+
+
+\end{itemize}
+
+%\subsection{Reports}
+%\begin{itemize}
+%\item \emph{Feature Identification and Tracking in the Plenoptic Space}, Candidacy Report for the Doctoral Program in Computer and Communication Systems, Under Supervision of Prof. Martin Vetterli, Summer 2012.
+%\item \emph{Content-Based Image Retrieval Using Relevance Feedback and Semi-Supervised Learning}, M. Sc. Thesis, Under Supervision of Dr. Mohammad Taghi Manzuri, Summer 2011.
+%\item \emph{A Survey on Website Classification Methods with Introduction to a  New Method Based on Internal PageRanks}, B.Sc. Thesis, Under Supervision of Dr. Hassan Abolhassani, Summer 2009.
+%
+%
+%\end{itemize}
+%
+%\subsection{Poster Presentations}
+%\begin{itemize}
+%	\item \textbf{Alireza Ghasemi}, Julien Lalande, Laurent Rime, Martin Vetterli, \textit{Light-Field/Plenoptic Image Processing - Principles}.  Research Day of the EPFL School of Computer and Communication Sciences, June 2014.\footnote{Poster available at \url{http://ics.epfl.ch/EDIC/down.asp?ID=1102&PID=1087}}
+%	\item \textbf{Alireza Ghasemi}, Julien Lalande, Laurent Rime, Martin Vetterli, \textit{Light-Field/Plenoptic Image Processing - Applications}.  Research Day of the EPFL School of Computer and Communication Sciences, June 2014.\footnote{Poster available at \url{http://ics.epfl.ch/EDIC/down.asp?ID=1103&PID=1050}}
+%\end{itemize}
+
+
+%\subsection{Editing Experience}
+%\begin{itemize}
+%\item Co-Editor of "Problems in Database Design", M.T. Rouhani Rankoohi, New Edition to be Published in 2011 (In Persian).
+%\item Co-Editor of "Systems Analysis and Design for the Global Enterprise",7th Edition, Benteley and Whitten, Translated to Persian by Dr. Jafar Habibi, To be Published in 2011.
+%\end{itemize}
+
+
+
+
+
+\section{Selected Courses}
+\begin{itemize}
+	
+	\item{Signal Processing and Pattern Recognition}
+		\begin{itemize}
+			\item Foundations of Imaging Sciences, Statistical Signal Processing, Image Processing, Speech Processing,  Machine Learning, Pattern Recognition,  Neural Networks and Fuzzy Systems, Computational Intelligence, Information Retrieval.
+			
+		\end{itemize}
+	
+	\item{Software and Systems}
+		\begin{itemize}
+			\item Database Systems, Object-Oriented Design, System Analysis and Design, Software Engineering, Computer Networks, Network Security, Compiler Design, Programming Languages.
+			
+			
+		\end{itemize}
+	
+\end{itemize}
+ 
+\section{Teaching Experience}
+\begin{itemize}
+%\item As Lecturer:
+%
+%\begin{itemize}
+%	\item Instructor of \emph{"Advanced Programming"} at Payam-e-Noor University of Qeshm, Fall 2009.
+%	\item Instructor of \emph{"Introduction to Programming"} at Payam-e-Noor University of Qeshm, Fall 2009.
+%	%\item Instructor of \emph{"Introduction to Programming"} at Oxin Institute for Higher Education, Fall 2010.
+%	%\item Instructor of \emph{"Database Design"} at Parseh Higher Education Institute, Fall 2010.
+%\end{itemize}
+%\item As Assistant:
+%\begin{itemize}
+	%\item Teaching Assistant in \emph{"Digital Signal Processing"} Offered as Online Course on the Coursera Platform, Instructed by Dr. Paolo Prandoni \& Prof. Martin Vetterli, Spring 2014.
+	 \item Teaching assistant for various courses at  \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne since Fall 2012.
+ %   \item Teaching Assistant in \emph{"Statistical Signal processing through Applications"}\footnote{Graduate Course} at  \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne, Instructed by Dr. Andrea Ridolfi and Dr. Mihailo Kolund\v{z}ija, Spring 2013.
+%	\item Teaching Assistant in \emph{"Informatique I"} at  \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne, Instructed by Dr. Jean-Philippe Pellet, Fall 2012.
+	\item Teaching assistant for various courses at Sharif University of Technology from Fall 2006 to Spring 2011.
+	\item Lecturer at Payam-e-Noor University of Qeshm, Fall 2009.
+%	\item Teaching Assistant in \emph{"Computer Simulation"} at Sharif University of Technology, Instructed by Dr. Jafar Habibi, Fall 2010.
+%	\item Teaching Assistant in \emph{"Database Systems"} at Sharif University of Technology, Instructed by Prof. M.T. Rouhani Rankoohi, Spring 2010 - Fall 2010.
+%	\item Teaching Assistant in \emph{"Database Systems"} at Shahid Beheshti University, Instructed by Prof. M.T. Rouhani Rankoohi, Spring 2010.
+%	\item Teaching Assistant in \emph{"Advanced Programming"} at Sharif University of Technology, Instructed by Mr. Soheil Hassas Yeganeh, Spring 2007.
+%	\item Teaching Assistant in \emph{"Introduction to Programming"} at Sharif University of Technology, Instructed by Mr. Ehsan Nazerfard, Spring 2006 - Spring 2007.
+	
+%\end{itemize}
+\end{itemize}
+\section{Skills}
+\begin{itemize}
+\item \textbf{Languages:} Persian (Native), English (Fluent), French (Intermediate), German (Beginner), Arabic (Basics).
+
+\item \textbf{Programming:} Java (Expert), MATLAB (Proficient), C/C++ (Fluent), SQL, PHP (Experienced), Python, Prolog, Lisp (Familiar).
+\item \textbf{Other:} \LaTeX \hspace*{2pt}(Fluent), Web Application Development: Play, Symfony, GWT, Grails, Spring, Struts2 (Experienced).
+
+
+\end{itemize}
+
+\section{References}
+
+Available upon request
+%\begin{itemize}
+%
+%\item \href{http://sharif.ir/~rabiee/}{Hamid R. Rabiee} \footnote{\href{mailto:rabiee@sharif.edu}{rabiee@sharif.edu}}
+%
+%\item \href{http://sharif.ir/~jhabibi/index.html/}{Jafar Habibi} \footnote{\href{mailto:jhabibi@sharif.edu}{jhabibi@sharif.edu}}
+%
+%%\item \href{http://sharif.ir/~rohani/}{Seyyed Mohammad Taghi Rouhani Rankoohi} \footnote{\href{mailto:rohani@sbu.ac.ir}{rohani@sbu.ac.ir}}
+%
+%\item \href{http://ce.sharif.edu/~halavati/}{Ramin Halavati} \footnote{\href{mailto:halavati@ce.sharif.edu}{halavati@ce.sharif.edu}}
+%
+%\item \href{http://sharif.edu/~beigy/}{Hamid Beigy} \footnote{\href{mailto:beigy@sharif.edu}{beigy@sharif.edu}}
+%
+%
+%\end{itemize}
+
+\end{document}
