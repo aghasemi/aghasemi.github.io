@@ -32,14 +32,14 @@
 			-ms-animation: none !important;
 			animation: none !important;
 		}
-		
+
 	body,input,textarea,select
 	{
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 		color: #777777;
 	}
-	
+
 	strong, b
 	{
 		font-weight: 400;
@@ -51,19 +51,19 @@
 		font-weight: 400;
 		color: #363636;
 	}
-	
+
 	blockquote
 	{
 		border-left: solid 0.5em #ddd;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
-	
+
 	em, i
 	{
 		font-style: italic;
 	}
-	
+
 	hr
 	{
 		border: 0;
@@ -71,14 +71,14 @@
 		padding: 1.5em 0 0 0;
 		margin: 1.75em 0 0 0;
 	}
-	
+
 	sub
 	{
 		position: relative;
 		top: 0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	sup
 	{
 		position: relative;
@@ -90,40 +90,40 @@
 	{
 		clear: both;
 	}
-	
+
 	p, ul, ol, dl, table, blockquote, form
 	{
 		margin-bottom: 2em;
 	}
-		
+
 	/* Table */
-	
+
 		table
 		{
 			width: 100%;
 		}
-		
+
 			table.default
 			{
 			}
-			
+
 				table.default tbody tr
 				{
 					border-bottom: solid 1px #f4f4f4;
 				}
-				
+
 				table.default td
 				{
 					padding: 0.5em 1em 0.5em 1em;
 				}
-				
+
 				table.default th
 				{
 					text-align: left;
 					font-weight: 400;
 					padding: 0.5em 1em 0.5em 1em;
 				}
-			
+
 				table.default thead
 				{
 					border-bottom: solid 2px #f4f4f4;
@@ -134,7 +134,7 @@
 		form
 		{
 		}
-		
+
 			form label
 			{
 				display: block;
@@ -142,7 +142,7 @@
 				color: #363636;
 				margin: 0 0 1em 0;
 			}
-		
+
 			form input[type="text"],
 			form input[type="email"],
 			form input[type="password"],
@@ -196,7 +196,7 @@
 			form :-ms-input-placeholder
 			{
 				color: #999;
-			}		
+			}
 
 	/* Section/Article */
 
@@ -205,7 +205,7 @@
 		{
 			margin-bottom: 3em;
 		}
-		
+
 			section > :last-child,
 			article > :last-child
 			{
@@ -221,19 +221,19 @@
 		header
 		{
 		}
-		
+
 			header > p
 			{
 				color: #aaa;
 			}
-	
+
 	/* Image */
 
 		.image
 		{
 			display: inline-block;
 		}
-		
+
 			.image img
 			{
 				display: block;
@@ -245,20 +245,20 @@
 				display: block;
 				width: 100%;
 			}
-			
+
 			.image.featured
 			{
 				display: block;
 				width: 100%;
 				margin: 0 0 2em 0;
 			}
-			
+
 			.image.left
 			{
 				float: left;
 				margin: 0 2em 2em 0;
 			}
-			
+
 			.image.centered
 			{
 				display: block;
@@ -271,7 +271,7 @@
 					width: auto;
 				}
 
-	/* Button */	
+	/* Button */
 
 		input[type="button"],
 		input[type="submit"],
@@ -299,7 +299,7 @@
 			{
 				background-color: #333333;
 			}
-			
+
 			input[type="button"]:active,
 			input[type="submit"]:active,
 			input[type="reset"]:active,
@@ -307,7 +307,7 @@
 			{
 				background-color: #444444;
 			}
-		
+
 			input[type="button"].alt,
 			input[type="submit"].alt,
 			input[type="reset"].alt,
@@ -323,7 +323,7 @@
 				{
 					background-color: #888888;
 				}
-				
+
 				input[type="button"].alt:active,
 				input[type="submit"].alt:active,
 				input[type="reset"].alt:active,
@@ -331,7 +331,7 @@
 				{
 					background-color: #999999;
 				}
-	
+
 	/* List */
 	
 		ul.default
@@ -339,27 +339,27 @@
 			list-style: disc;
 			padding-left: 1em;
 		}
-		
+
 			ul.default li
 			{
 				padding-left: 0.5em;
 			}
-			
+
 		ul.actions
 		{
 		}
-		
+
 			ul.actions li
 			{
 				display: inline-block;
 				margin-left: 0.5em;
 			}
-			
+
 				ul.actions li:first-child
 				{
 					margin-left: 0;
 				}
-		
+
 		ol.default
 		{
 			list-style: decimal;
@@ -392,15 +392,15 @@
 		.icon > .label {
 			display: none;
 		}
-		
+
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
-	
+
 	#nav
 	{
 	}
-	
+
 		#nav a
 		{
 			position: relative;
@@ -415,7 +415,7 @@
 			{
 				padding-right: 0;
 			}
-		
+
 /*********************************************************************************/
 /* Panels                                                                        */
 /*********************************************************************************/
@@ -432,11 +432,11 @@
 	}
 
 	/* Me */
-	
+
 		#me
 		{
 		}
-		
+
 			#me .pic
 			{
 				position: relative;
@@ -475,16 +475,16 @@
 			-ms-transition: color .25s ease-in-out;
 			transition: color .25s ease-in-out;
 		}
-		
+
 		#footer a:hover
 		{
 			color: rgba(255,255,255,1.0);
 		}
-		
+
 		#footer .copyright
 		{
 		}
-		
+
 			#footer .copyright li
 			{
 				display: inline-block;
@@ -497,7 +497,7 @@
 					opacity: 0.5;
 					padding: 0 0.75em 0 0.75em;
 				}
-			
+
 				#footer .copyright li:first-child:before
 				{
 					display: none;
