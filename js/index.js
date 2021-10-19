@@ -4,7 +4,7 @@ renderMD = async () => {
 	const hash = window.location.hash
 	const pgHash = hash.length===0 ? 'Home':  hash.substring(1)
 
-	const config = await (await fetch(`./_config.json`)).json()
+	const config = await (await fetch(`/_config.json`)).json()
 	const my_name = config['title']
 	const pages = config['pages']
 	
@@ -12,7 +12,7 @@ renderMD = async () => {
 	document.getElementById('copyright-holder').innerHTML = my_name
 	document.getElementById('pages').innerHTML =''
 
-	let current_page_path = `./content/${pgHash}.md` //Default path. Will be used if an array is given as list
+	let current_page_path = `/content/${pgHash}.md` //Default path. Will be used if an array is given as list
 	const page_titles = Array.isArray(pages) ? pages : Object.keys(pages)  
 	
 	page_titles.forEach(page_title => {
