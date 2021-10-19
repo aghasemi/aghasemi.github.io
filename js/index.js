@@ -4,7 +4,7 @@ renderMD = async () => {
 	const hash = window.location.hash
 	const pgHash = hash.length===0 ? 'Home':  hash.substring(1)
 
-	const config = await (await fetch(`/_config.json`)).json()
+	const config = await (await fetch(`/config.json`)).json()
 	const my_name = config['title']
 	const pages = config['pages']
 	
