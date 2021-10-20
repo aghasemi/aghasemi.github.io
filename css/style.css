@@ -111,8 +111,8 @@ html {
 
 @media (min-width:800px) {
 	.base-view {
-		left: 8%;
-		width: 84% !important;
+		left: 5%;
+		width: 90% !important;
 		padding-left: 10px;
 		padding-right: 10px;
 

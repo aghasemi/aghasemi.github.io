@@ -1,5 +1,6 @@
 {
 	"title": "Alireza Ghasemi",
+	"styleFile": "/css/style.css",
 	"pages": {
 		"Home":"/content/Home.md",
 		"About": "/content/About.md",
