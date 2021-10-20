@@ -11,12 +11,16 @@ const loadCSS = (url, callback) => {
     return el;
 }
 
+let config = undefined
+
+
 const renderFromAnchor = async () => {
+	config = config===undefined ?  await (await fetch(`/config.json`)).json() : config
 
 	const hash = window.location.hash
 	const pgHash = hash.length===0 ? 'Home':  hash.substring(1)
 
-	const config = await (await fetch(`/config.json`)).json()
+	
 	const siteName = config['title']
 	const pages = config['pages']
 	
