@@ -1,14 +1,14 @@
 {
 	"title": "Alireza Ghasemi",
 	"pages": {
-		"Home":"./content/Home.md",
-		"About": "./content/About.md",
-		"Education": "./content/Education.md",
-		"Experience":"./content/Experience.md", 
-		"Publications": "./content/Publications.md",
-		"Awards": "./content/Awards.md", 
-		"Skills":"./content/Skills.md",
-		"Languages": "./content/Languages.md",
-		"Contact": "./content/Contact.md"
+		"Home":"/content/Home.md",
+		"About": "/content/About.md",
+		"Education": "/content/Education.md",
+		"Experience":"/content/Experience.md", 
+		"Publications": "/content/Publications.md",
+		"Awards": "/content/Awards.md", 
+		"Skills":"/content/Skills.md",
+		"Languages": "/content/Languages.md",
+		"Contact": "/content/Contact.md"
 	}
 }

@@ -98,14 +98,12 @@ html {
 }
 
 .profile-photo {
-	padding-top: 30px;
 	width:140px;
-	max-width:160px;
+	max-width:200px;
 }
 
 @media (min-width: 700px) {
 	.profile-photo {
-		padding-top: 0px;
 		width:250px;
 		max-width:300px;
 	}
