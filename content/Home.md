@@ -10,7 +10,7 @@
 		</p>
 	</div>
     	<div class="col-12 col-sm-4" align="center">  			
-		<img class="profile-photo"  src="./img/AGm-small.jpg" alt="Alireza Ghasemi" ></img>
+		<img class="profile-photo"  src="/img/AGm-small.jpg" alt="Alireza Ghasemi" ></img>
 	</div>
   </div>
   
