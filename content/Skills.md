@@ -22,6 +22,6 @@ Programming Languages
 - __JavaScript:__ Experienced. I have used JavaScript in server-side programming (Node.js and Meteor) and Google Chrome extension development as well as client-side scripting.
 - __MATLAB:__ Proficient. I have used MATLAB in research since 2007. I have done tens of small and medium-level projects, mostly in the machine learning, signal processing and computer vision areas, but also in simulation and optimization.
 - __SQL:__ Experienced. I have used plain SQL and JDBC in small and medium-sized projects and also in data analytics and visualisation. I have experiences in database design (ER diagrams, …) as well and have taught undergraduate database courses for numerous classes from 2009 to 2011.
-- - __PHP, Groovy:__ I did medium-level projects in PHP and Groovy from 2009 to 2011.
+- __PHP, Groovy:__ I did medium-level projects in PHP and Groovy from 2009 to 2011.
 - __C/C++:__ Brief experience. I have been programming in C/C++ on and off since high-school (circa 2002).
 - __LaTeX:__ Fluent and experienced. I have been actively using and developing LaTeX since 2007 for every type of document (Reports, posters, presentation slides,…).
