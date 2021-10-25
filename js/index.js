@@ -21,20 +21,23 @@ const renderFromAnchor = async () => {
 	const pgHash = hash.length===0 ? 'Home':  hash.substring(1)
 
 	
-	const siteName = config['title']
+	const siteName = config['siteName']
+	const copyrightMarkdown = config['copyrightNotice']
 	const pages = config['pages']
 	
 	document.getElementById('my-name').innerHTML = siteName
-	document.getElementById('copyright-holder').innerHTML = siteName
+	document.getElementById('copyright-holder').innerHTML = marked.parseInline(copyrightMarkdown)
 	document.getElementById('pages').innerHTML =''
 
 	let currentPagePath = `/content/${pgHash}.md` //Default path. Will be used if an array is given as list
+	let currentPageTitle = pgHash
 	const pageTitles = Array.isArray(pages) ? pages : Object.keys(pages)  
 	
 	pageTitles.forEach(page_title => {
 		const pageAnchor = page_title.replace(/ /g, '_'); //Remove all whitespaces
 
 		currentPagePath = (pageAnchor===pgHash && (typeof pages[page_title] !== 'undefined') ) ? pages[page_title] : currentPagePath
+		currentPageTitle = (pageAnchor===pgHash  ) ? page_title : currentPageTitle
 		document.getElementById('pages').innerHTML += `<li class="nav-item"><a class="nav-link" href="#${pageAnchor}">${page_title}</a></li>`
 	});
 

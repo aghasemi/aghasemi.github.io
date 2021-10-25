@@ -1,5 +1,6 @@
 {
-	"title": "Alireza Ghasemi",
+	"siteName": "Alireza Ghasemi",
+	"copyrightNotice": "© 2021 Copyright: [Alireza Ghasemi](/#)",
 	"styleFile": "/css/style.css",
 	"pages": {
 		"Home":"/content/Home.md",
