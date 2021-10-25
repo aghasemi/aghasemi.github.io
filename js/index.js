@@ -1,4 +1,6 @@
 
+
+
 const loadCSS = (url, callback) => {
     var el = document.createElement("link");
     el.href = url;
@@ -38,7 +40,7 @@ const renderFromAnchor = async () => {
 
 		currentPagePath = (pageAnchor===pgHash && (typeof pages[page_title] !== 'undefined') ) ? pages[page_title] : currentPagePath
 		currentPageTitle = (pageAnchor===pgHash  ) ? page_title : currentPageTitle
-		document.getElementById('pages').innerHTML += `<li class="nav-item"><a class="nav-link" href="#${pageAnchor}">${page_title}</a></li>`
+		document.getElementById('pages').innerHTML += `<li class="nav-item"><a class="nav-link" href="#${pageAnchor}" >${page_title}</a></li>`
 	});
 
 
@@ -48,6 +50,12 @@ const renderFromAnchor = async () => {
 	document.title =  `${siteName} - ${pgHash}`;
 	const result   = await (await fetch(currentPagePath) ).text()
 	document.getElementById('content').innerHTML = marked(result);
+
+	//Close the Navbar after clicking
+	const navLinks = document.querySelectorAll('.nav-item')
+	const menuToggle = document.getElementById('navbarSupportedContent')
+	const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false})
+	navLinks.forEach((l) => {l.addEventListener('click', () => { bsCollapse.toggle() }) })
 	
 	
 }
