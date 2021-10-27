@@ -10,9 +10,8 @@ Technical Expertise
 - __Scientific Computing:__ Expert in Numerical & Blackbox Optimisation, Convex & Non-Convex problems (MATLAB, Python, R)
 - __Web Application Development:__ I have done small and medium-level projects using various web frameworks including Symfony, Spring, Struts2, GWT, Grails, ….
 - __NoSQL:__ I like NoSQL databases. I have been using Firebase and MongoDB in my projects (Android and client-side JavaScript) since 2014.
-- __Operating Systems:__ I have worked with various flavours of Linux (Debian, Fedora, Mint, Ubuntu) and Windows for both personal and professional use. I currently administer a virtual private server (VPS) running Debian for personal purposes. I also have experiences with Win32 programming.
-- __Version Control and Build Automation Systems:__ I have worked with Git and SVN for version controlling in the projects I've been involved. I'm also a user of Maven and Gradle for managing dependencies and build automation in the Java environment.
 - __Typesetting:__ Fluent and experienced in LaTeX. I have been actively using and developing LaTeX since 2007 for every type of document (reports, posters, presentation slides,…).
+- __Miscellaneous:__ I have worked with various flavours of Linux (Debian, Fedora, Mint, Ubuntu), Windows, and macOS for both personal and professional use. I  have managed servers (via VPS and KVM) running Linux for personal projects. I also have experiences with Win32 programming. I have worked with Git and SVN for version control in the projects in which I've been involved. I'm also a user of Maven, Gradle, and SBT for managing dependencies and build automation in the Java environment.
 
 Programming Languages
 ------------
