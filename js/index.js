@@ -49,7 +49,7 @@ const renderFromAnchor = async () => {
 
 	document.title =  `${siteName} - ${pgHash}`;
 	const result   = await (await fetch(currentPagePath) ).text()
-	document.getElementById('content').innerHTML = marked(result);
+	document.getElementById('content').innerHTML = marked.parse(result);
 
 	//Close the Navbar after clicking
 	const navLinks = document.querySelectorAll('.nav-item')
