@@ -11,9 +11,8 @@ Technical Expertise
 - __Web Application Development:__ I have done small and medium-level projects using various web frameworks including Symfony, Spring, Struts2, GWT, Grails, ….
 - __NoSQL:__ I like NoSQL databases. I have been using Firebase and MongoDB in my projects (Android and client-side JavaScript) since 2014.
 - __Typesetting:__ Fluent and experienced in LaTeX. I have been actively using and developing LaTeX since 2007 for every type of document (reports, posters, presentation slides,…).
-- __Miscellaneous:__ I have worked with various flavours of Linux (Debian, Fedora, Mint, Ubuntu), Windows, and macOS for both personal and professional use. I  have managed servers (via VPS and KVM) running Linux for personal projects. I also have experiences with Win32 programming. I have worked with Git and SVN for version control in the projects in which I've been involved. I'm also a user of Maven, Gradle, and SBT for managing dependencies and build automation in the Java environment.
 
-Programming Languages
+Programming
 ------------
 
 - __Java:__ Expert. Java has been my primary programming language since 2005. I have done many types of projects, from desktop GUIs (Swing, JavaFX) to large-scale application servers to scientific computing (Machine learning and data engineering using Spark, Kafka, SMILE, and DL4J, NLP using CoreNLP, Computational Geometry, Computer Vision using OpenCV, …) and Android development.
@@ -24,3 +23,4 @@ Programming Languages
 - __MATLAB:__ Proficient. I have used MATLAB in research since 2007. I have done tens of small and medium-level projects, mostly in the machine learning, signal processing and computer vision areas, but also in simulation and optimization.
 - __PHP, Groovy:__ I did medium-level projects in PHP and Groovy from 2009 to 2011.
 - __C/C++:__ Brief experience. I have been programming in C/C++ on and off since high-school (circa 2002).
+- __Tools:__ I have worked with various flavours of Linux (Debian, Fedora, Mint, Ubuntu), Windows, and macOS for both personal and professional use. I  have managed servers (via VPS and KVM) running Linux for personal projects. I also have experiences with Win32 programming. I have worked with Git and SVN for version control in the projects in which I've been involved. I'm also a user of Maven, Gradle, and SBT for managing dependencies and build automation in the Java environment.
