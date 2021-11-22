@@ -40,7 +40,7 @@ const renderFromAnchor = async () => {
 
 		currentPagePath = (pageAnchor===pgHash && (typeof pages[page_title] !== 'undefined') ) ? pages[page_title] : currentPagePath
 		currentPageTitle = (pageAnchor===pgHash  ) ? page_title : currentPageTitle
-		document.getElementById('pages').innerHTML += `<li class="nav-item"><a class="nav-link" href="#${pageAnchor}" >${page_title}</a></li>`
+		document.getElementById('pages').innerHTML += `<a class="list-group-item list-group-item-action list-group-item-light p-3" href="#${pageAnchor}" >${page_title}</a>\n`
 	});
 
 
@@ -51,15 +51,25 @@ const renderFromAnchor = async () => {
 	const result   = await (await fetch(currentPagePath) ).text()
 	document.getElementById('content').innerHTML = marked.parse(result);
 
-	//Close the Navbar after clicking
-	const navLinks = document.querySelectorAll('.nav-item')
-	const menuToggle = document.getElementById('navbarSupportedContent')
-	const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false})
-	navLinks.forEach((l) => {l.addEventListener('click', () => { bsCollapse.toggle() }) })
-	
 	
 }
 
 window.addEventListener('hashchange', () => renderFromAnchor())
 
+window.addEventListener('DOMContentLoaded', event => {
+
+	const sidebarToggle = document.body.querySelector('#sidebarToggle');
+    if (sidebarToggle) {
+        
+        sidebarToggle.addEventListener('click', event => {
+            event.preventDefault();
+            document.body.classList.toggle('sb-sidenav-toggled');
+            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+        });
+    }
+
+});
+
+
 window.onload = () => renderFromAnchor()
+
