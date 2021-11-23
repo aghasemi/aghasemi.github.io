@@ -39,3 +39,8 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -16rem;
   }
 }
+
+.fill-left {
+	float: left;
+	width: 100%;
+}
