@@ -70,6 +70,11 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
+	document.getElementById('pages').addEventListener('click', event => {
+		const isMobile = ! window.matchMedia('(min-width: 768px)').matches;
+		if (isMobile) document.body.classList.toggle('sb-sidenav-toggled');
+	});
+
 });
 
 
