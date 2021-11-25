@@ -1,6 +1,3 @@
-Language Portfolio
-==========
-
 You may want to looke at [my Duolingo profile](https://www.duolingo.com/alireza). I happily use Duolingo to learn new languages.
 
 - __Persian:__ Native.
