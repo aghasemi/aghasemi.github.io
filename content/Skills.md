@@ -1,6 +1,3 @@
-Skills
-===========
-
 Technical Expertise
 ------------
 
