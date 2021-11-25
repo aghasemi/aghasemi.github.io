@@ -1,6 +1,3 @@
-Honors and Awards
-=================
-
 - __Fall 2015:__ Granted the EPFL Bonus for Exceptional Performance.
 - __Spring 2015:__ Granted IEEE Signal Processing Society (SPS) Travel Grant to attend the conference ICIP 2015.
 - __Spring 2015:__ Granted the Qualcomm Innovation Fellowship 2015.
