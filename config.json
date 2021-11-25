@@ -4,13 +4,13 @@
 	"styleFile": "/css/styles.css",
 	"pages": {
 		"Home":"/content/Home.md",
-		"About": "/content/About.md",
+		"About Me": "/content/About.md",
 		"Education": "/content/Education.md",
-		"Experience":"/content/Experience.md", 
+		"Professional Experience":"/content/Experience.md", 
 		"Publications": "/content/Publications.md",
-		"Awards": "/content/Awards.md", 
+		"Honors and Awards": "/content/Awards.md", 
 		"Skills":"/content/Skills.md",
-		"Languages": "/content/Languages.md",
+		"Language Portfolio": "/content/Languages.md",
 		"Contact": "/content/Contact.md"
 	}
 }
