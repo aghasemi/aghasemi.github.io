@@ -1,7 +1,4 @@
-Publications
-============
-
-You can visit [my Google Scholar profile](https://scholar.google.com/citations?user=7MDdx4sAAAAJ&hl=en).
+You can visit a complete list in [my Google Scholar profile](https://scholar.google.com/citations?user=7MDdx4sAAAAJ&hl=en).
 
 Patents
 ------------
