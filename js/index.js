@@ -28,7 +28,6 @@ const renderFromAnchor = async () => {
 	const pages = config['pages']
 	
 	document.getElementById('my-name').innerHTML = siteName
-	//document.getElementById('my-name').style.display = "none"
 	document.getElementById('copyright-holder').innerHTML = marked.parseInline(copyrightMarkdown)
 	document.getElementById('pages').innerHTML =''
 
@@ -52,6 +51,8 @@ const renderFromAnchor = async () => {
 	const result   = await (await fetch(currentPagePath) ).text()
 	document.getElementById('content').innerHTML = marked.parse(result);
 	document.getElementById('page-title').innerHTML = currentPageTitle
+
+	console.log(currentPageTitle)
 
 	
 }

@@ -21,6 +21,16 @@
   min-width: 100vw;
 }
 
+#page-title, #my-name {
+  height: auto;
+}
+
+.container-fluid{
+  padding-left: 0rem;
+  padding-right: 0rem;
+  overflow: hidden;
+}
+
 body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   margin-left: 0;
 }
