@@ -1,4 +1,4 @@
-- __July 2021 - Present:__ Senior AI Engineer, Swisscom, Bern/Zürich, Switzerland.
+- __July 2021 - Present:__ Expert AI Engineer, Swisscom, Bern/Zürich, Switzerland.
 - __January 2021 - June 2021:__ Expert Data Scientist, ELCA Informatik, Zürich, Switzerland.
 - __September 2018 - December 2020:__ Senior Engineer/Data Scientist, ELCA Informatik, Zürich, Switzerland.
 - __January 2017 - August 2018:__ Data Scientist and Software Engineer, ELCA Informatique, Lausanne, Switzerland.
