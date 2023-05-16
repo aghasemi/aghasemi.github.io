@@ -3,13 +3,13 @@
 	"copyrightNotice": "© 2021 Copyright: [Alireza Ghasemi](/#)",
 	"styleFile": "/css/styles.css",
 	"pages": {
-		"Home":"/content/Home.md",
+		"Home": "/content/Home.md",
 		"About Me": "/content/About.md",
 		"Education": "/content/Education.md",
 		"Professional Experience":"/content/Experience.md", 
 		"Publications": "/content/Publications.md",
 		"Honors and Awards": "/content/Awards.md", 
-		"Skills":"/content/Skills.md",
+		"Skills": "/content/Skills.md",
 		"Language Portfolio": "/content/Languages.md",
 		"Contact": "/content/Contact.md"
 	}
